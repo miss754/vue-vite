@@ -11,7 +11,7 @@ const theme = {
 <template>
   <span class="iconfont icon-shezhi"></span>
   <span class="iconfont icon-settings"></span>
-  <div>GFGGGGGF</div>
+  <div>GFGGGGGF挂号费</div>
   <span>var()函数</span>
   <h1 class="title">Hello World</h1>
   <p class="content">The content color is red</p>
