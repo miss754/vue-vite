@@ -2,7 +2,7 @@
  * @Author: xgh1055219 1119391382@qq.com
  * @Date: 2022-08-19 22:47:06
  * @LastEditors: xgh1055219 1119391382@qq.com
- * @LastEditTime: 2022-08-20 17:33:41
+ * @LastEditTime: 2022-08-20 20:52:27
  * @FilePath: \typescriptd:\CodeHub\vue-vite\src\App.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -14,6 +14,7 @@ const theme = {
   color: 'red',
   fontSize: '30px'
 }
+tools.LocalStorage.setItem('test_storage', 'test_value')
 </script>
 
 <template>
@@ -21,7 +22,11 @@ const theme = {
   <span class="iconfont icon-weibiaoti-2-08"></span>
   <span class="iconfont icon-zhankaicaidan"></span>
   <span class="iconfont icon-icon-settings"></span>
-  <div>GFGGGGGF挂号费脚后跟经过</div>
+  <div>
+    {{ app.getConfig('baseUrl') }}
+
+    {{ tools.LocalStorage.getItem('test_storage') }}
+  </div>
   <div>var()函数</div>
   <h1 class="title">Hello World</h1>
   <p class="content">The content color is red</p>
