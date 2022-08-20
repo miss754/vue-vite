@@ -6,6 +6,104 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "29527197",
+      "name": "liduquxian_画板 1",
+      "font_class": "a-liduquxian_huaban1",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "29656524",
+      "name": "文字",
+      "font_class": "wenzi-01",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "29819865",
+      "name": "学籍打印",
+      "font_class": "weibiaoti-2-08",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "29819866",
+      "name": "休学复学",
+      "font_class": "weibiaoti-2-06",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "29819869",
+      "name": "档案申请管理",
+      "font_class": "weibiaoti-2-15",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "29819870",
+      "name": "我的待办",
+      "font_class": "weibiaoti-2-13",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "29819876",
+      "name": "资料出库",
+      "font_class": "weibiaoti-2-21",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "29957917",
+      "name": "身份证认证",
+      "font_class": "daVrenzheng",
+      "unicode": "100d7",
+      "unicode_decimal": 65751
+    },
+    {
+      "icon_id": "29957920",
+      "name": "品牌认证",
+      "font_class": "darenrenzheng",
+      "unicode": "100d8",
+      "unicode_decimal": 65752
+    },
+    {
+      "icon_id": "29527175",
+      "name": "fanqu_画板 1",
+      "font_class": "a-fanqu_huaban1",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "29527193",
+      "name": "yinfen_画板 1",
+      "font_class": "a-yinfen_huaban1",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "29657127",
+      "name": "双键盘",
+      "font_class": "shuangjianpan-01",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "29657128",
+      "name": "双音色",
+      "font_class": "shuangyinse-01",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    },
+    {
+      "icon_id": "5390616",
+      "name": "icon-settings",
+      "font_class": "icon-settings",
+      "unicode": "e645",
+      "unicode_decimal": 58949
+    },
+    {
       "icon_id": "1304886",
       "name": "收起菜单",
       "font_class": "shouqicaidan",

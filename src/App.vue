@@ -1,3 +1,11 @@
+<!--
+ * @Author: xgh1055219 1119391382@qq.com
+ * @Date: 2022-08-19 22:47:06
+ * @LastEditors: xgh1055219 1119391382@qq.com
+ * @LastEditTime: 2022-08-20 17:33:41
+ * @FilePath: \typescriptd:\CodeHub\vue-vite\src\App.vue
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
@@ -10,7 +18,9 @@ const theme = {
 
 <template>
   <span class="iconfont icon-shezhi"></span>
-  <span class="iconfont icon-settings"></span>
+  <span class="iconfont icon-weibiaoti-2-08"></span>
+  <span class="iconfont icon-zhankaicaidan"></span>
+  <span class="iconfont icon-icon-settings"></span>
   <div>GFGGGGGF挂号费脚后跟经过</div>
   <div>var()函数</div>
   <h1 class="title">Hello World</h1>
