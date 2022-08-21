@@ -1,3 +1,11 @@
+/*
+ * @Author: xgh1055219 1119391382@qq.com
+ * @Date: 2022-02-27 17:55:54
+ * @LastEditors: xgh1055219 1119391382@qq.com
+ * @LastEditTime: 2022-08-21 00:28:18
+ * @FilePath: \typescriptd:\CodeHub\vue-vite\vite.config.ts
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
@@ -14,14 +22,14 @@ export default defineConfig({
     // 代理
     proxy: {
       '/api': {
-          target: 'http://xxx.xxx.xx',
-          changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/api/, '')
+        target: 'http://xxx.xxx.xx',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
       }
     }
   },
   resolve: {
-    alias:{
+    alias: {
       '@': resolve(__dirname, 'src'),
       'views': resolve(__dirname, 'src/view'),
     },
@@ -38,8 +46,8 @@ export default defineConfig({
     // 引入 autoprefixer css样式加前缀
     postcss: {
       plugins: [
-          require('autoprefixer')
+        require('autoprefixer')
       ]
-  }
+    }
   }
 })
