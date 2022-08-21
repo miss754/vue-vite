@@ -2,7 +2,7 @@
  * @Author: xgh1055219 1119391382@qq.com
  * @Date: 2022-08-20 19:02:37
  * @LastEditors: xgh1055219 1119391382@qq.com
- * @LastEditTime: 2022-08-21 18:29:38
+ * @LastEditTime: 2022-08-21 19:36:02
  * @FilePath: \typescriptd:\CodeHub\vue-vite\src\config\init.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -35,4 +35,12 @@ export const initApp = async () => {
   // import.meta.glob 不支持以变量的方式加载数据
   // 因此只有全部加载，然后再过滤不需要的语言包内容
   initLanguage()
+
+  // 初始化各业务模块
+  const iAllEntry = import.meta.globEager('../bmode/*/entry.ts')
+  debugger
+  for (const path in iAllEntry) {
+    const iEntryFile = iAllEntry[path]
+    iEntryFile && iEntryFile.entryInit && await iEntryFile.entryInit()
+  }
 }
