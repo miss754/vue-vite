@@ -128,3 +128,28 @@ module.exports = {
 三.集成 pinia
 1.安装pinia
 yarn add pinia --save
+
+2.新建 src/store 目录并在其下面创建 index.ts，导出 store
+
+ import { createPinia } from 'pinia'
+
+ const store = createPinia()
+
+ export default store
+
+3.在 main.ts 中引入并使用
+
+ import { createApp } from 'vue'
+ import App from './App.vue'
+ import store from './store'
+ ​
+ // 创建vue实例
+ const app = createApp(App)
+ ​
+ // 挂载pinia
+ app.use(store)
+ ​
+ // 挂载实例
+ app.mount('#app');
+
+4.定义State： 在 src/store 下面创建一个 user.ts
