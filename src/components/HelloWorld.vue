@@ -2,15 +2,19 @@
  * @Author: xgh1055219 1119391382@qq.com
  * @Date: 2022-02-27 17:55:54
  * @LastEditors: xgh1055219 1119391382@qq.com
- * @LastEditTime: 2022-08-23 23:19:48
+ * @LastEditTime: 2023-01-15 18:28:06
  * @FilePath: \typescriptd:\CodeHub\vue-vite\src\components\HelloWorld.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <script setup lang="ts">
 import { ref } from 'vue'
-import Cookies from 'js-cookie'
 
-defineProps<{ msg: string }>()
+
+const { msg, id, title } = defineProps<{
+  msg: string,
+  id: number,
+  title: string,
+}>()
 const count = ref(0);
 /**
  * @description: 
@@ -32,6 +36,10 @@ const vFocus = {
 
 <template>
   <h1>{{ msg }}</h1>
+
+  <h1>{{ id }}</h1>
+
+  <h1>{{ title }}</h1>
 
   <button type="button" @click="count++">count is: {{ count }}</button>
 

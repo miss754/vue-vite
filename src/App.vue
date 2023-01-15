@@ -2,7 +2,7 @@
  * @Author: xgh1055219 1119391382@qq.com
  * @Date: 2022-08-19 22:47:06
  * @LastEditors: xgh1055219 1119391382@qq.com
- * @LastEditTime: 2022-08-21 17:39:38
+ * @LastEditTime: 2022-08-31 22:47:55
  * @FilePath: \typescriptd:\CodeHub\vue-vite\src\App.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -10,20 +10,23 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import HelloWorld from '@/components/HelloWorld.vue'
-import { getCurrentInstance, ComponentInternalInstance } from 'vue';
+import { reactive } from 'vue';
 
-
-let instance = getCurrentInstance() as ComponentInternalInstance
 const theme = {
   color: 'red',
   fontSize: '30px'
 }
+const post = reactive({
+  id: 1,
+  title: 'My Journey with Vue'
+})
 tools.LocalStorage.setItem('test_storage', 'test_value')
 
-setTimeout(() => {
-  instance.appContext.config.globalProperties.loading.show()
-}, 3000)
-// loading.show()
+const add = () => {
+  post.id++
+  post.title = post.title.split(' ').reverse().join('-')
+  alert(post.id)
+}
 
 console.log(language('Index'))
 </script>
@@ -47,7 +50,8 @@ console.log(language('Index'))
   <h1 class="title">Hello World</h1>
   <p class="content">The content color is red</p>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" v-bind="post" />
+  <button @click="add">加一</button>
 </template>
 
 <style lang="scss" scoped>
