@@ -2,7 +2,7 @@
  * @Author: xgh1055219 1119391382@qq.com
  * @Date: 2022-08-19 22:47:06
  * @LastEditors: xgh1055219 1119391382@qq.com
- * @LastEditTime: 2022-08-31 22:47:55
+ * @LastEditTime: 2023-01-15 19:07:10
  * @FilePath: \typescriptd:\CodeHub\vue-vite\src\App.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -36,7 +36,7 @@ console.log(language('Index'))
   <span class="iconfont icon-weibiaoti-2-08"></span>
   <span class="iconfont icon-zhankaicaidan"></span>
   <span class="iconfont icon-icon-settings"></span>
-  <div>
+  <div><!--  -->
     {{ app.getConfig('baseUrl') }}
 
     {{ tools.LocalStorage.getItem('test_storage') }}
