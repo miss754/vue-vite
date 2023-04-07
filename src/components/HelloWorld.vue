@@ -1,36 +1,49 @@
+<!--
+ * @Author: xgh1055219 1119391382@qq.com
+ * @Date: 2022-02-27 17:55:54
+ * @LastEditors: xgh1055219 1119391382@qq.com
+ * @LastEditTime: 2023-01-15 18:28:06
+ * @FilePath: \typescriptd:\CodeHub\vue-vite\src\components\HelloWorld.vue
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
 <script setup lang="ts">
 import { ref } from 'vue'
 
-defineProps<{ msg: string }>()
 
-const count = ref(0)
+const { msg, id, title } = defineProps<{
+  msg: string,
+  id: number,
+  title: string,
+}>()
+const count = ref(0);
+/**
+ * @description: 
+ * @param {*} uid
+ * @return {*}
+ * @author: xgh1055219
+ * @name: 
+ */
+function getName(uid: string) {
+  return uid;
+}
+const vFocus = {
+  mounted(el: HTMLElement, binding: any, vnode: any) {
+    alert(1)
+    el.focus()
+  }
+}
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
 
-  <p>
-    Recommended IDE setup:
-    <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
-    +
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-  </p>
+  <h1>{{ id }}</h1>
 
-  <p>See <code>README.md</code> for more information.</p>
-
-  <p>
-    <a href="https://vitejs.dev/guide/features.html" target="_blank">
-      Vite Docs
-    </a>
-    |
-    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
-  </p>
+  <h1>{{ title }}</h1>
 
   <button type="button" @click="count++">count is: {{ count }}</button>
-  <p>
-    Edit
-    <code>components/HelloWorld.vue</code> to test hot module replacement.
-  </p>
+
+  <input type="text" placeholder="请输入名称" v-focus>
 </template>
 
 <style scoped lang="scss">

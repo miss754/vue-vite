@@ -3,17 +3,26 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --force --host",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "eslint:comment": "使用 ESLint 检查并自动修复 src 目录下所有扩展名为 .js 和 .vue 的文件",
+    "eslint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
+    "prettier:comment": "自动格式化当前目录下的所有文件",
+    "prettier": "prettier --write"
   },
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.48.1",
+    "@typescript-eslint/parser": "^5.48.1",
     "axios": "^0.27.2",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "js-cookie": "^3.0.1",
     "lodash": "^4.17.21",
     "nanoid": "^4.0.0",
     "normalize": "^0.3.1",
-    "pinia": "^2.0.18",
+    "pinia": "^2.0.28",
+    "prettier": "^2.8.3",
     "qs": "^6.11.0",
     "vant": "^3.5.4",
     "vue": "^3.2.25",
@@ -26,12 +35,27 @@
     "@types/qs": "^6.9.7",
     "@vitejs/plugin-vue": "^2.2.0",
     "autoprefixer": "^10.4.8",
+    "eslint": "^8.32.0",
+    "eslint-plugin-vue": "^9.9.0",
     "postcss": "^8.4.16",
     "postcss-modules": "^5.0.0",
     "postcss-pxtorem": "^6.0.0",
     "sass": "^1.54.4",
     "typescript": "^4.5.4",
+    "unplugin-vue-components": "^0.22.4",
     "vite": "^2.8.0",
+    "vite-plugin-optimize-persist": "^0.1.2",
+    "vite-plugin-package-config": "^0.1.1",
     "vue-tsc": "^0.29.8"
+  },
+  "vite": {
+    "optimizeDeps": {
+      "include": [
+        "js-cookie",
+        "lodash",
+        "pinia",
+        "vue"
+      ]
+    }
   }
 }
