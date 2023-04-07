@@ -2,7 +2,7 @@
  * @Author: xgh1055219 1119391382@qq.com
  * @Date: 2022-08-20 16:41:41
  * @LastEditors: xgh1055219 1119391382@qq.com
- * @LastEditTime: 2022-08-21 14:27:09
+ * @LastEditTime: 2023-03-11 19:58:23
  * @FilePath: \typescriptd:\CodeHub\vue-vite\src\utils\index.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -128,4 +128,35 @@ function getCookie(name: string): string {
 function clearCookie(name: string): void {
   const date = new Date(0)
   document.cookie = `${name}='';expires=${date}`
+}
+
+/* 
+节流函数
+ */
+// export function throttle(callBack: Function, delay: number) {
+//   let timer: any = null
+//   const _throttle = (...args: any) => {
+//     if (timer) { return };
+//     timer = setTimeout(() => {
+//       callBack(args)
+//       clearTimeout(timer);
+//       timer = null;
+//     }, delay)
+//   }
+//   return _throttle;
+// }
+
+// 回调函数的类型
+type ReFn = (...args: any) => void
+// 节流函数的类型
+type ThFn = (fn: ReFn, delay: number) => ReFn
+export const throttle: ThFn = (fn, delay) => {
+  let time: any = null
+  const _throttle = (...args: any) => {
+    if (time) clearTimeout(time)
+    time = setTimeout(() => {
+      fn.apply(this, args)
+    }, delay);
+  }
+  return _throttle
 }
